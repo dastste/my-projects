@@ -1,0 +1,153 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(images/bg-pattern-desktop.svg);
+    margin: 0px;
+    color: hsl(0, 36%, 70%);
+    font-size: 16px;
+}
+
+.mage{
+    display: none;
+}
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    min-width: 300px;
+
+    .text{
+        width: 100%;
+        padding: 5rem 3rem 0rem 9rem;
+
+        .h-1{
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+
+    .h-2{
+        width: 100%;
+        color: #333;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+        letter-spacing: 20px;
+        font-weight: 600;
+        font-size: xx-large;
+    }
+    
+    span{
+        display: block;
+        padding-bottom: 0.5rem;
+    }
+    .cl-1{
+        color: $Primary-color;
+        font-weight: 300;
+    }
+    .cl-2{
+        font-weight: 600;
+        color: $secodary-color;
+    }
+    .p-1{
+        width: 60%;
+        white-space: normal;
+        color: $Primary-color;
+        line-height: 25px;
+        padding-bottom: 2rem;
+    }
+
+.logo{
+    position: relative;
+    bottom: 0;
+    min-width: 600px;
+    height: 100vh;
+
+    img{
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 700px;
+    }
+}
+
+.fm-1{
+    margin: 0;
+    padding: 0;
+
+    input {
+        background-color:$soft-color;
+        height: 50px;
+        width: 270px;
+        border-radius: 40px;
+        outline-width: 0px;
+        border: solid 1px #ccc;
+        padding-left: 1.5rem;
+    }
+    ::placeholder{
+        color: #ccc;
+        opacity: 1;
+    }
+
+    .error{
+        position: relative;
+        top: 7px;
+        right: 80px;
+        visibility: hidden;
+    }
+
+    small{
+        position: absolute;
+        left: 20px;
+        display: block;
+        visibility: hidden;
+        padding-left: 9rem;
+    }
+    
+    .btn{
+        position: relative;
+        top: 3px;
+        right: 83px;
+        width: 70px;
+        height: 50px;
+        border-radius: 40px;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        padding: 0;
+        border: none;
+        box-shadow: 5px 5px 8px  hsl(0, 14%, 74%);
+        outline-width: 0px;
+        cursor: pointer;
+        :hover{
+            opacity: 1;
+            background-image:  linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        }
+    }
+
+}
+
+#email:invalid ~ .Err {
+    visibility: visible;
+    opacity: 1;
+    color: #e74c3c;;
+}
+#email:invalid{
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.attribution { width: 600px;
+    padding: 2rem 3rem 0rem 9rem; font-size: 16px; }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+};
+
+@import 'mobile';
